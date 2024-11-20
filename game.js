@@ -49,7 +49,10 @@ function draw() {
     //player to start the game
     //drawButton(); 
 
-    drawCharacter();
+  fill(white);
+  rect(-25, -160, 50, 300, 10);
+
+
   }
 }
 
