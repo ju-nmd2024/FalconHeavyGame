@@ -187,7 +187,7 @@ function drawCrashScreen() {
   fill(white);
   textAlign(CENTER, CENTER);
   textSize(32);
-  text("YOU CRASHED", canvasX / 2, canvasY / 2 - 50);
+  text("YOU CRASHED", canvasX / 2, canvasY / 2 - 100);
 
   drawButton();
 }
@@ -196,7 +196,7 @@ function drawWinScreen() {
   fill(white);
   textAlign(CENTER, CENTER);
   textSize(32);
-  text("MISSION ACCOMPLISHED", canvasX / 2, canvasY / 2 - 50);
+  text("MISSION ACCOMPLISHED", canvasX / 2, canvasY / 2 - 100);
 
   drawButton();
 }
