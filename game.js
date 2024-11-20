@@ -40,14 +40,16 @@ let rectHeight = 100;
 function draw() {
   //if the button has been clicked called the moveCharacter and drawCharacter functions
   //gamestate is set in the drawButton function.
-  background(black);
-  if (gameState === 1) {
-    moveCharacter();
-    drawCharacter(x, y, rotation, scaleFactor);
-  } else {
+  //background(black);
+  //if (gameState === 1) {
+    //moveCharacter();
+    //drawCharacter(x, y, rotation, scaleFactor);
+  //} else {
     //if the gamestate is 0 then called the drawButton function to allow the
     //player to start the game
-    drawButton();
+    //drawButton(); 
+
+    drawCharacter();
   }
 }
 
