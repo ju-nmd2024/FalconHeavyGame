@@ -14,6 +14,7 @@ let red = "rgb(255,0,0)";
 let green = "rgb(0,128,0)";
 let black = "rgb(0,0,0)";
 let grey = "rgb(145, 142, 133)";
+let skyBlue = "rgb(0,181,226)";
 
 let x = canvasX / 2; //Start halfway across the canvas
 let y = 0; //Start at the top of the canvas
@@ -27,7 +28,7 @@ let thrustPower = 0.4; //Max thrust of rocket
 let drag = 0.98; //Drag slows down the rocket
 
 let terminalVelocity = 6; //Max possible speed of the rocket when falling
-let crashVelocity = 4; //Max safe landing speed
+let crashVelocity = 3; //Max safe landing speed
 
 //Platform variables
 let platformX = canvasX / 2 - 50; //Platform position
@@ -39,7 +40,7 @@ let platformHeight = 10;
 let grassHeight = 20;
 
 function draw() {
-  background(black);
+  background(skyBlue);
 
   if (gameState === 1) {
     //Game in progress
@@ -220,4 +221,8 @@ function restartGame() {
   velocityX = 0;
   velocityY = 0;
   rotation = 0;
+
+  //Randomly places the platform
+  platformX = random(0, canvasX - platformWidth);
 }
+
