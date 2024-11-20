@@ -2,7 +2,7 @@ let canvasX = 800;
 let canvasY = 550;
 
 function setup() {
-  createCanvas(canvasX, canvasY);
+  createCanvas(800, 550);
 }
 
 let canvasX = 800;
