@@ -13,9 +13,10 @@ let white = "rgb(255,255,255)";
 let red = "rgb(255,0,0)";
 let green = "rgb(0,128,0)";
 let black = "rgb(0,0,0)";
+let grey = "rgb(145, 142, 133)";
 
 let x = canvasX / 2; //Start halfway across the canvas
-let y = 300; //Start at the top of the canvas
+let y = 0; //Start at the top of the canvas
 let rotation = 0; //Initial rotation is 0
 let speed = 0; //Initial speed is 0
 
@@ -48,13 +49,12 @@ function draw() {
     drawCharacter(x, y, rotation, scaleFactor);
 
     //check for crash on grass
-    if (y >= canvasY - grassHeight - 10) {
+    if (y >= canvasY - grassHeight - 40) {
       gameState = 2; // Crash state
     }
-
     //Check for successful landing on platform
     if (
-      y >= platformY - 10 &&
+      y >= platformY - 40 &&
       y <= platformY &&
       x > platformX &&
       x < platformX + platformWidth &&
@@ -130,7 +130,7 @@ function drawCharacter(x, y, rotation, scaleFactor) {
 }
 
 function drawPlatform() {
-  fill(red);
+  fill(grey);
   rect(platformX, platformY, platformWidth, platformHeight);
 }
 
@@ -216,7 +216,7 @@ function mousePressed() {
 
 function restartGame() {
   x = canvasX / 2;
-  y = 300;
+  y = 0;
   velocityX = 0;
   velocityY = 0;
   rotation = 0;
