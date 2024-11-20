@@ -19,7 +19,6 @@ let skyBlue = "rgb(0,181,226)";
 let x = canvasX / 2; //Start halfway across the canvas
 let y = 0; //Start at the top of the canvas
 let rotation = 0; //Initial rotation is 0
-let speed = 0; //Initial speed is 0
 
 let velocityX = 0; //Velocity in the x-direction
 let velocityY = 0; //Velocity in the y-direction
@@ -141,9 +140,9 @@ function drawGrassFloor() {
 }
 
 function moveCharacter() {
-  //Apply thrust when the 'W' key is pressed
-  if (keyIsDown(87)) {
-    //W key is pressed
+  //Apply thrust when the spacebar is pressed
+  if (keyIsDown(32)) {
+    //Space bar pressed
     velocityX += Math.sin(rotation) * thrustPower;
     velocityY -= Math.cos(rotation) * thrustPower;
   }
@@ -182,6 +181,10 @@ function drawButton() {
   textAlign(CENTER, CENTER); //Center align button text
   textSize(24); //Set the text size
   text("START", canvasX / 2, canvasY / 2); //Position the text at the button center
+
+  text("SPACE = Thrust", canvasX / 2, 380);
+  text("A = Rotate Left", canvasX / 2, 420);
+  text("W = Rotate Right", canvasX / 2, 460);
 }
 
 function drawCrashScreen() {
@@ -225,4 +228,3 @@ function restartGame() {
   //Randomly places the platform
   platformX = random(0, canvasX - platformWidth);
 }
-
